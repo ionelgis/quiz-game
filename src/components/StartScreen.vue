@@ -21,6 +21,14 @@
           <span>📜</span> History Quiz
           <span class="ml-auto text-amber-200 text-sm font-normal">10 questions · History</span>
         </button>
+
+        <button
+          @click="$emit('start', 'math')"
+          class="w-full bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all duration-200 shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-0.5 flex items-center justify-center gap-3"
+        >
+          <span>🔢</span> Math Quiz
+          <span class="ml-auto text-emerald-200 text-sm font-normal">10 questions · Math</span>
+        </button>
       </div>
     </div>
   </div>

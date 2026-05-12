@@ -1,3 +1,76 @@
+export const mathQuestions = [
+  {
+    id: 1,
+    question: "What is 15 × 8?",
+    options: ["110", "120", "125", "130"],
+    answer: "120",
+    category: "Math",
+  },
+  {
+    id: 2,
+    question: "What is the square root of 144?",
+    options: ["10", "11", "12", "13"],
+    answer: "12",
+    category: "Math",
+  },
+  {
+    id: 3,
+    question: "What is 25% of 200?",
+    options: ["40", "45", "50", "55"],
+    answer: "50",
+    category: "Math",
+  },
+  {
+    id: 4,
+    question: "What is 7³ (7 cubed)?",
+    options: ["343", "349", "357", "363"],
+    answer: "343",
+    category: "Math",
+  },
+  {
+    id: 5,
+    question: "If a triangle has angles of 45° and 75°, what is the third angle?",
+    options: ["50°", "55°", "60°", "65°"],
+    answer: "60°",
+    category: "Math",
+  },
+  {
+    id: 6,
+    question: "What is the value of π (pi) rounded to two decimal places?",
+    options: ["3.12", "3.14", "3.16", "3.18"],
+    answer: "3.14",
+    category: "Math",
+  },
+  {
+    id: 7,
+    question: "What is 144 ÷ 12?",
+    options: ["10", "11", "12", "13"],
+    answer: "12",
+    category: "Math",
+  },
+  {
+    id: 8,
+    question: "What is the next prime number after 11?",
+    options: ["12", "13", "14", "15"],
+    answer: "13",
+    category: "Math",
+  },
+  {
+    id: 9,
+    question: "What is the area of a rectangle with width 7 and height 9?",
+    options: ["54", "56", "61", "63"],
+    answer: "63",
+    category: "Math",
+  },
+  {
+    id: 10,
+    question: "What is 2¹⁰ (2 to the power of 10)?",
+    options: ["512", "1024", "2048", "256"],
+    answer: "1024",
+    category: "Math",
+  },
+]
+
 export const historyQuestions = [
   {
     id: 1,
