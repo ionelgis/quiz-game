@@ -3,9 +3,9 @@
   <QuestionCard
     v-else-if="phase === 'quiz'"
     :key="currentIndex"
-    :question="questions[currentIndex]"
+    :question="activeQuestions[currentIndex]"
     :current="currentIndex"
-    :total="questions.length"
+    :total="activeQuestions.length"
     :score="score"
     @answer="handleAnswer"
     @next="nextQuestion"
@@ -13,14 +13,14 @@
   <ResultsScreen
     v-else-if="phase === 'results'"
     :score="score"
-    :total="questions.length"
+    :total="activeQuestions.length"
     @restart="restart"
   />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { questions } from './data/questions.js'
+import { ref, computed } from 'vue'
+import { questions, historyQuestions } from './data/questions.js'
 import StartScreen from './components/StartScreen.vue'
 import QuestionCard from './components/QuestionCard.vue'
 import ResultsScreen from './components/ResultsScreen.vue'
@@ -28,8 +28,14 @@ import ResultsScreen from './components/ResultsScreen.vue'
 const phase = ref('start')
 const currentIndex = ref(0)
 const score = ref(0)
+const quizType = ref('general')
 
-function startQuiz() {
+const activeQuestions = computed(() =>
+  quizType.value === 'history' ? historyQuestions : questions
+)
+
+function startQuiz(type) {
+  quizType.value = type
   currentIndex.value = 0
   score.value = 0
   phase.value = 'quiz'
@@ -40,7 +46,7 @@ function handleAnswer(correct) {
 }
 
 function nextQuestion() {
-  if (currentIndex.value + 1 < questions.length) {
+  if (currentIndex.value + 1 < activeQuestions.value.length) {
     currentIndex.value++
   } else {
     phase.value = 'results'
