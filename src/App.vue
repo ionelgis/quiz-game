@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { questions, historyQuestions } from './data/questions.js'
+import { questions, historyQuestions, mathQuestions } from './data/questions.js'
 import StartScreen from './components/StartScreen.vue'
 import QuestionCard from './components/QuestionCard.vue'
 import ResultsScreen from './components/ResultsScreen.vue'
@@ -30,9 +30,11 @@ const currentIndex = ref(0)
 const score = ref(0)
 const quizType = ref('general')
 
-const activeQuestions = computed(() =>
-  quizType.value === 'history' ? historyQuestions : questions
-)
+const activeQuestions = computed(() => {
+  if (quizType.value === 'history') return historyQuestions
+  if (quizType.value === 'math') return mathQuestions
+  return questions
+})
 
 function startQuiz(type) {
   quizType.value = type
