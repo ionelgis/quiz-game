@@ -1,3 +1,76 @@
+export const historyQuestions = [
+  {
+    id: 1,
+    question: "In which year did World War I begin?",
+    options: ["1912", "1914", "1916", "1918"],
+    answer: "1914",
+    category: "History",
+  },
+  {
+    id: 2,
+    question: "Who was the first President of the United States?",
+    options: ["John Adams", "Thomas Jefferson", "Benjamin Franklin", "George Washington"],
+    answer: "George Washington",
+    category: "History",
+  },
+  {
+    id: 3,
+    question: "The fall of the Berlin Wall occurred in which year?",
+    options: ["1987", "1988", "1989", "1991"],
+    answer: "1989",
+    category: "History",
+  },
+  {
+    id: 4,
+    question: "Which ancient wonder was located in Alexandria, Egypt?",
+    options: ["The Colossus of Rhodes", "The Lighthouse of Alexandria", "The Hanging Gardens", "The Statue of Zeus"],
+    answer: "The Lighthouse of Alexandria",
+    category: "History",
+  },
+  {
+    id: 5,
+    question: "Who led the Cuban Revolution that ousted Batista in 1959?",
+    options: ["Che Guevara", "Fidel Castro", "Raúl Castro", "Camilo Cienfuegos"],
+    answer: "Fidel Castro",
+    category: "History",
+  },
+  {
+    id: 6,
+    question: "In which year did World War II end?",
+    options: ["1943", "1944", "1945", "1946"],
+    answer: "1945",
+    category: "History",
+  },
+  {
+    id: 7,
+    question: "The Roman Colosseum was completed under which emperor?",
+    options: ["Julius Caesar", "Augustus", "Titus", "Nero"],
+    answer: "Titus",
+    category: "History",
+  },
+  {
+    id: 8,
+    question: "Which country was the first to grant women the right to vote nationally?",
+    options: ["United Kingdom", "United States", "New Zealand", "Sweden"],
+    answer: "New Zealand",
+    category: "History",
+  },
+  {
+    id: 9,
+    question: "The Black Death pandemic reached Europe in which century?",
+    options: ["12th", "13th", "14th", "15th"],
+    answer: "14th",
+    category: "History",
+  },
+  {
+    id: 10,
+    question: "Who was the first woman to win a Nobel Prize?",
+    options: ["Rosalind Franklin", "Ada Lovelace", "Marie Curie", "Florence Nightingale"],
+    answer: "Marie Curie",
+    category: "History",
+  },
+]
+
 export const questions = [
   {
     id: 1,
